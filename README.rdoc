@@ -1,28 +1,26 @@
-== README
+== Open Source Apprenticeship Project Website
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Rails 4.0.0
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
+* Ruby 2.0.0
 
 * Configuration
 
+```
+cp config/credentials{.example,}.yml
+```
+
 * Database creation
 
-* Database initialization
+```
+rake db:create
+rake db:migrate
+```
 
-* How to run the test suite
+* Running the tests
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+```
+rake
+# or
+rake spec
+```

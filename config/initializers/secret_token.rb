@@ -9,4 +9,8 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Dotcom::Application.config.secret_key_base = 'd2782a548dc0cddcefde597342b27108d1e0decb749fc957221db2ee8b678cfbdaea1e42a5e88720fefa8a7877508ff796b2d14347d66d32e995ddb574004857'
+Dotcom::Application.config.secret_key_base = if Rails.env.development? or Rails.env.test?
+  ('x' * 30)
+else
+  ENV['SECRET_KEY_BASE']
+end

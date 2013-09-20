@@ -35,8 +35,14 @@ gem 'jbuilder', '~> 1.2'
 # Use puma as the app server
 gem 'puma'
 
-# Use haml because it results in less code
+# Use haml because it is awesome!
 gem 'haml'
+
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-github'
+gem 'omniauth-bitbucket'
+gem 'omniauth-twitter'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
